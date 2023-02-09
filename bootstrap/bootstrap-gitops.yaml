@@ -5,9 +5,16 @@ metadata:
   namespace: openshift-gitops
 spec:
   destination:
+    name: ''
     namespace: openshift-gitops
-    server: 
-  project: default
+    server: 'https://kubernetes.default.svc'
   source:
     path: acm-argocd-integration
     repoURL: https://github.com/ignaciolago/service-mesh-gitops.git
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - PruneLast=true
