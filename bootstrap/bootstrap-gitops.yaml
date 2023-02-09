@@ -10,4 +10,4 @@ spec:
   project: default
   source:
     path: acm-argocd-integration
-    repoURL: https://github.com/ignaciolago/multi-cluster-deploy.git
+    repoURL: https://github.com/ignaciolago/service-mesh-gitops.git
