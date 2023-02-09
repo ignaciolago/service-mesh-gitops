@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: service-mesh-operator
+  name: smesh-operator
   namespace: openshift-gitops
 spec:
   generators:
@@ -16,7 +16,7 @@ spec:
     metadata:
       labels:
         velero.io/exclude-from-backup: "true"
-      name: service-mesh-operator-{{name}}
+      name: smesh-operator-{{name}}
     spec:
       destination:
         namespace: openshift-operators
