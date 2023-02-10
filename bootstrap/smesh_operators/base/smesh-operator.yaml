@@ -23,7 +23,7 @@ spec:
         server: '{{server}}'
       project: default
       source:
-        path: operators
+        path: resources/service_mesh_operators
         repoURL: 'https://github.com/ignaciolago/service-mesh-gitops.git'
         targetRevision: main
       syncPolicy:
