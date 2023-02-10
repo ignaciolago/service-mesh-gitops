@@ -10,7 +10,7 @@ spec:
       configMapRef: acm-placement
       labelSelector:
         matchLabels:
-          cluster.open-cluster-management.io/placement: gitops-clusters
+          cluster.open-cluster-management.io/placement: -placement
       requeueAfterSeconds: 180
   template:
     metadata:
@@ -32,3 +32,15 @@ spec:
           selfHeal: true
         syncOptions:
         - PruneLast=true
+---
+apiVersion: cluster.open-cluster-management.io/v1alpha1
+kind: Placement
+metadata:
+  name: -placement
+  namespace: 
+spec:
+  predicates:
+  - requiredClusterSelector:
+      labelSelector:
+        matchLabels:
+          name: cluster-4
