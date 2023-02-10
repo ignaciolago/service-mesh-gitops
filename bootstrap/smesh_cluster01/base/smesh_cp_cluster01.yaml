@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: smesh_cluster01
+  name: smesh-cluster01
   namespace: openshift-gitops
 spec:
   destination:
@@ -10,7 +10,7 @@ spec:
     namespace: openshift-gitops
     server: 'https://kubernetes.default.svc'
   source:
-    path: resources/smesh_cluster01
+    path: resources/smesh_cluster01/base
     repoURL: https://github.com/ignaciolago/service-mesh-gitops.git
   project: default
   syncPolicy:

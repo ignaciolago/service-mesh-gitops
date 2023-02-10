@@ -11,8 +11,9 @@ spec:
     namespace: openshift-gitops
     server: 'https://kubernetes.default.svc'
   source:
-    path: resources/acm_operator
+    path: resources/acm_operator/base
     repoURL: https://github.com/ignaciolago/service-mesh-gitops.git
+    targetRevision: main
   project: default
   syncPolicy:
     automated:
