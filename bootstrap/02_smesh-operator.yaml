@@ -1,0 +1,29 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: smesh-operator
+  namespace: openshift-gitops
+spec:
+  generators:
+  - clusters: "default"
+  template:
+    metadata:
+      labels:
+        velero.io/exclude-from-backup: "true"
+      name: smesh-operator-{{name}}
+    spec:
+      destination:
+        namespace: openshift-operators
+        server: '{{server}}'
+      project: default
+      source:
+        path: operators
+        repoURL: 'https://github.com/ignaciolago/service-mesh-gitops.git'
+        targetRevision: main
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+        - PruneLast=true
