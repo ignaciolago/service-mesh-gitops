@@ -1,9 +1,22 @@
 # Create MulticlusterHub CRD
-# oc get mch -o=jsonpath='{.items[0].status.phase}' -n open-cluster-management
 ---
-apiVersion: operator.open-cluster-management.io/v1
-kind: MultiClusterHub
+apiVersion: argoproj.io/v1alpha1
+kind: Application
 metadata:
   name: multiclusterhub
-  namespace: open-cluster-management
-spec: {}
+  namespace: openshift-gitops
+spec:
+  destination:
+    name: ''
+    namespace: openshift-gitops
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: resources/acm_multiclusterhub
+    repoURL: https://github.com/ignaciolago/service-mesh-gitops.git
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - PruneLast=true

@@ -1,5 +1,3 @@
 ---
 resources:
-- acm_namespace.yaml
-- acm_operatorgroup.yaml
-- acm_subscription.yaml
+- acm_operator.yaml
