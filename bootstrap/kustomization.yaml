@@ -4,5 +4,5 @@ bases:
 - ./openshift/base
 - ./acm_multiclusterhub/base
 - ./smesh_operators/base
-- ./smesh_cp_cluster01/base
-- ./smesh_cp_cluster02/base
+#- ./smesh_cp_cluster01/base
+#- ./smesh_cp_cluster02/base
