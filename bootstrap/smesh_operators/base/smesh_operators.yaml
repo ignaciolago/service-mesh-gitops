@@ -32,3 +32,12 @@ spec:
           selfHeal: true
         syncOptions:
         - PruneLast=true
+---
+apiVersion: cluster.open-cluster-management.io/v1beta1
+kind: Placement
+metadata:
+  name: smesh-operator-placement
+  namespace: openshift-gitops
+spec:
+  clusterSets:
+    - gitops-clusters
