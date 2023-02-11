@@ -1,45 +1,21 @@
 ---
 apiVersion: argoproj.io/v1alpha1
-kind: ApplicationSet
+kind: Application
 metadata:
-  name: smesh-operator
+  name: smesh-app
   namespace: openshift-gitops
 spec:
-  generators:
-  - clusterDecisionResource:
-      configMapRef: acm-placement
-      labelSelector:
-        matchLabels:
-          cluster.open-cluster-management.io/placement: gitops-clusters
-      requeueAfterSeconds: 180
-  template:
-    metadata:
-      annotations:
-        argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
-      labels:
-        velero.io/exclude-from-backup: "true"
-      name: smesh-operator-{{name}}
-    spec:
-      destination:
-        namespace: openshift-operators
-        server: '{{server}}'
-      project: default
-      source:
-        path: resources/service_mesh_operators/base
-        repoURL: 'https://github.com/ignaciolago/service-mesh-gitops.git'
-        targetRevision: main
-      syncPolicy:
-        automated:
-          prune: true
-          selfHeal: true
-        syncOptions:
-        - PruneLast=true
----
-apiVersion: cluster.open-cluster-management.io/v1beta1
-kind: Placement
-metadata:
-  name: smesh-operator-placement
-  namespace: openshift-gitops
-spec:
-  clusterSets:
-    - gitops-clusters
+  destination:
+    name: ''
+    namespace: openshift-gitops
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: resources/service_mesh_operators
+    repoURL: https://github.com/ignaciolago/service-mesh-gitops.git
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - PruneLast=true
