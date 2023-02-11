@@ -14,6 +14,8 @@ spec:
       requeueAfterSeconds: 180
   template:
     metadata:
+      annotations:
+        argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
       labels:
         velero.io/exclude-from-backup: "true"
       name: smesh-operator-{{name}}
