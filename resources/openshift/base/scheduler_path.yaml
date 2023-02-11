@@ -5,5 +5,5 @@ metadata:
   name: cluster
 spec:
   mastersSchedulable: false
-  label: 
+  labels: 
     cluster.open-cluster-management.io/clusterset: gitops-clusters
