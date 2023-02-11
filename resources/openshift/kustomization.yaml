@@ -1,6 +1,6 @@
 ---
 bases:
-- ./scheduler.yaml
-- ./scheduler_path.yaml
+#- ./scheduler.yaml
+#- ./scheduler_path.yaml
 - ./managedcluster.yaml
 
