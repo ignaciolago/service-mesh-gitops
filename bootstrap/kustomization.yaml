@@ -1,9 +1,9 @@
 ---
 bases:
 - ./acm_operator/base
-- ./openshift/base
 - ./acm_multiclusterhub/base
-- ./smesh_operators/base
 - ./gitops_acm/base
+- ./openshift/base
+- ./smesh_operators/base
 #- ./smesh_cluster01/base
 #- ./smesh_cluster02/base
