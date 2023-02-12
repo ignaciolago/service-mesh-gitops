@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: smesh-control-plane-cluster01
+  name: smesh-control-plane-{{name}}
   namespace: openshift-gitops
 spec:
   generators:
@@ -10,11 +10,11 @@ spec:
         configMapRef: acm-placement
         labelSelector:
           matchLabels:
-            cluster.open-cluster-management.io/placement: smesh-control-plane-cluster01-placement
+            cluster.open-cluster-management.io/placement: smesh-control-plane-{{name}}-placement
         requeueAfterSeconds: 180
   template:
     metadata:
-      name: smesh-control-plane-cluster01-{{name}}
+      name: smesh-control-plane-{{name}}
       labels:
         velero.io/exclude-from-backup: "true"
     spec:
@@ -37,7 +37,7 @@ spec:
 apiVersion: cluster.open-cluster-management.io/v1beta1
 kind: Placement
 metadata:
-  name: smesh-control-plane-cluster01-placement
+  name: smesh-control-plane-{{name}}-placement
   namespace: openshift-gitops
 spec:
   clusterSets:
