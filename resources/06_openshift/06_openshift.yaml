@@ -8,8 +8,6 @@ spec:
   ignoreDifferences:
   - group: '*'
     kind: Secret
-    jsonPointers:
-    - /
   destination:
     name: ''
     namespace: openshift-gitops
