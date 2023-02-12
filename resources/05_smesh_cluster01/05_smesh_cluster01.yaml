@@ -22,7 +22,7 @@ spec:
       source:
         repoURL: https://github.com/ignaciolago/service-mesh-gitops.git
         targetRevision: main
-        path: resources/05_smesh_cluster01/base
+        path: resources/05_service_mesh_cluster01/base
       destination:
         namespace: openshift-gitops
         server: "{{server}}"
