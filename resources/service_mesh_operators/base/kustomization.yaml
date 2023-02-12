@@ -1,5 +1,0 @@
----
-bases:
-- ./jaeger_operator.yaml
-- ./kiali_operator.yaml
-- ./ocp_servicemesh_operator.yaml

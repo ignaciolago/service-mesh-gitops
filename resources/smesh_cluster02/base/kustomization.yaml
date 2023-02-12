@@ -1,4 +1,0 @@
----
-resources:
-- control_plane_cluster02.yaml
-- namespace_control_plane_cluster02.yaml

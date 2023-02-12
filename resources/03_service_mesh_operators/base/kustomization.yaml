@@ -1,0 +1,6 @@
+---
+bases:
+#- 01_elastic_search_operator.yaml
+- 02_jaeger_operator.yaml
+- 03_kiali_operator.yaml
+- 04_ocp_servicemesh_operator.yaml

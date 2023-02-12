@@ -1,9 +1,8 @@
-# oc apply -f 04_acm-gitopservice.yaml
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: gitops-acm
+  name: service-mesh-app
   namespace: openshift-gitops
 spec:
   destination:
@@ -11,7 +10,7 @@ spec:
     namespace: openshift-gitops
     server: 'https://kubernetes.default.svc'
   source:
-    path: resources/gitops_acm/base
+    path: resources/03_service_mesh_operators
     repoURL: https://github.com/ignaciolago/service-mesh-gitops.git
   project: default
   syncPolicy:

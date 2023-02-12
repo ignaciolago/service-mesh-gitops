@@ -1,0 +1,6 @@
+---
+resources:
+- 01_acm_managedclusterset.yaml
+- 02_acm_managedclustersetbinding.yaml
+- 03_acm_placement.yaml
+- 04_acm_gitopscluster.yaml
