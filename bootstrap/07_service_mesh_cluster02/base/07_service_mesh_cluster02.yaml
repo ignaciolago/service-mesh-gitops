@@ -10,7 +10,7 @@ spec:
     namespace: openshift-gitops
     server: 'https://kubernetes.default.svc'
   source:
-    path: resources/07_smesh_cluster02/base
+    path: resources/07_service_mesh_cluster02/base
     repoURL: https://github.com/ignaciolago/service-mesh-gitops.git
   project: default
   syncPolicy:

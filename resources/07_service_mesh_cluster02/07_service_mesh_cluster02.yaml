@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: smesh-control-plane-cluster02
+  name: service_mesh-control-plane-cluster02
   namespace: openshift-gitops
 spec:
   generators:
@@ -10,11 +10,11 @@ spec:
         configMapRef: acm-placement
         labelSelector:
           matchLabels:
-            cluster.open-cluster-management.io/placement: smesh-control-plane-cluster02-placement
+            cluster.open-cluster-management.io/placement: service_mesh-control-plane-cluster02-placement
         requeueAfterSeconds: 180
   template:
     metadata:
-      name: smesh-control-plane-{{name}}
+      name: service_mesh-control-plane-{{name}}
       labels:
         velero.io/exclude-from-backup: "true"
     spec:
@@ -22,7 +22,7 @@ spec:
       source:
         repoURL: https://github.com/ignaciolago/service-mesh-gitops.git
         targetRevision: main
-        path: resources/smesh_cluster02/base
+        path: resources/service_mesh_cluster02/base
       destination:
         namespace: openshift-gitops
         server: "{{server}}"
@@ -37,7 +37,7 @@ spec:
 apiVersion: cluster.open-cluster-management.io/v1beta1
 kind: Placement
 metadata:
-  name: smesh-control-plane-cluster02-placement
+  name: service_mesh-control-plane-cluster02-placement
   namespace: openshift-gitops
 spec:
   clusterSets:
