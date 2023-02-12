@@ -1,9 +1,9 @@
-# Define cluster2-mesh1 control plane
+# Define cluster1-mesh1 control plane
 apiVersion: maistra.io/v2
 kind: ServiceMeshControlPlane
 metadata:
-  name: cluster2-mesh1
-  # namespace: cluster2-mesh1-system
+  name: cluster01-mesh-system
+  # namespace: cluster1-mesh1-system
 spec:
   version: v2.1
   runtime:
@@ -32,8 +32,8 @@ spec:
     prometheus:
       enabled: true
   # cluster:
-  #   name: cluster2-mesh1
-  #   network: cluster2-mesh1-net1
+  #   name: cluster1-mesh1
+  #   network: cluster1-mesh1-net1
   gateways:
     # enabled: true
     # egress:
@@ -49,31 +49,31 @@ spec:
     # openshiftRoute:
     #   enabled: false
     additionalEgress:
-      cluster1-mesh1-egress:
+      cluster2-mesh1-egress:
         enabled: true
         requestedNetworkView:
-        - network-cluster1-mesh1
+        - network-cluster2-mesh1
         routerMode: sni-dnat
         service:
           metadata:
             labels:
-              # federation.maistra.io/proxy: egress-cluster1-mesh1
-              federation.maistra.io/egress-for: cluster1-mesh1
+              # federation.maistra.io/proxy: egress-cluster2-mesh1
+              federation.maistra.io/egress-for: cluster2-mesh1
           ports:
           - port: 15443
             name: tls
           - port: 8188
             name: http-discovery  #note HTTP here
     additionalIngress:
-      cluster1-mesh1-ingress:
+      cluster2-mesh1-ingress:
         enabled: true
         routerMode: sni-dnat
         service:
           type: LoadBalancer
           metadata:
             labels:
-              # federation.maistra.io/proxy: ingress-cluster1-mesh1
-              federation.maistra.io/ingress-for: cluster1-mesh1
+              # federation.maistra.io/proxy: ingress-cluster2-mesh1
+              federation.maistra.io/ingress-for: cluster2-mesh1
             annotations:
               service.beta.kubernetes.io/aws-load-balancer-type: nlb
           ports:
@@ -83,6 +83,6 @@ spec:
             name: https-discovery  #note HTTPS here
   security:
     trust:
-      domain: cluster2-mesh1.local
+      domain: cluster1-mesh1.local
   # telemetry:
   #   type: Istiod

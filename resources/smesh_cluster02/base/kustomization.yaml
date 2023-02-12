@@ -1,3 +1,4 @@
 ---
 resources:
-- 00-istio-controlplane-cluster2-mesh1.yaml
+- control_plane_cluster02.yaml
+- namespace_control_plane_cluster02.yaml
