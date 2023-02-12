@@ -16,6 +16,10 @@ spec:
     group: cluster.open-cluster-management.io
     jsonPointers:
     - /metadata
+  - kind: '*'
+    group: '*'
+    jsonPointers:
+    - /
   destination:
     name: ''
     namespace: openshift-gitops
