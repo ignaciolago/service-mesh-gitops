@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: service_mesh-control-plane-cluster02
+  name: service-mesh-control-plane-cluster02
   namespace: openshift-gitops
 spec:
   generators:
@@ -14,7 +14,7 @@ spec:
         requeueAfterSeconds: 180
   template:
     metadata:
-      name: service_mesh-control-plane-{{name}}
+      name: service-mesh-control-plane-{{name}}
       labels:
         velero.io/exclude-from-backup: "true"
     spec:
@@ -37,7 +37,7 @@ spec:
 apiVersion: cluster.open-cluster-management.io/v1beta1
 kind: Placement
 metadata:
-  name: service_mesh-control-plane-cluster02-placement
+  name: service-mesh-control-plane-cluster02-placement
   namespace: openshift-gitops
 spec:
   clusterSets:
