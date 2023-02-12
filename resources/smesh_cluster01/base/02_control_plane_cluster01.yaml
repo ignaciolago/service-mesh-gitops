@@ -2,7 +2,7 @@
 apiVersion: maistra.io/v2
 kind: ServiceMeshControlPlane
 metadata:
-  name: cluster1-mesh1
+  name: cluster01-mesh01
   # namespace: cluster1-mesh1-system
 spec:
   version: v2.1
