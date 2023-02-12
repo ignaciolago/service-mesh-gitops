@@ -2,5 +2,5 @@
 bases:
 #- ./scheduler.yaml
 #- ./scheduler_path.yaml
-- ./managedcluster.yaml
+#- ./managedcluster.yaml
 
