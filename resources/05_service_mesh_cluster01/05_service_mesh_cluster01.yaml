@@ -14,7 +14,7 @@ spec:
         requeueAfterSeconds: 180
   template:
     metadata:
-      name: service_mesh-control-plane-{{name}}
+      name: service-mesh-control-plane-{{name}}
       labels:
         velero.io/exclude-from-backup: "true"
     spec:
