@@ -6,4 +6,4 @@ bases:
 - 04_spring_app/base
 - 05_service_mesh_cluster01/base
 - 06_openshift/base
-#- 05_service_mesh_cluster02/base
+- 07_service_mesh_cluster02/base
