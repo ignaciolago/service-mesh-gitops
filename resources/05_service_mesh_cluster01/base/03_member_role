@@ -1,0 +1,8 @@
+kind: ServiceMeshMemberRoll
+apiVersion: maistra.io/v1
+metadata:
+  name: default
+  namespace: cluster01-mesh-system
+spec:
+  members:
+    - spring-app
