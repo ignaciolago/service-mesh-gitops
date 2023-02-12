@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: service_mesh-operator
+  name: service-mesh-operator
   namespace: openshift-gitops
 spec:
   generators:
@@ -16,7 +16,7 @@ spec:
     metadata:
       labels:
         velero.io/exclude-from-backup: "true"
-      name: service_mesh-operator-{{name}}
+      name: service-mesh-operator-{{name}}
     spec:
       destination:
         namespace: openshift-gitops
@@ -36,7 +36,7 @@ spec:
 apiVersion: cluster.open-cluster-management.io/v1beta1
 kind: Placement
 metadata:
-  name: service_mesh-operator-placement
+  name: service-mesh-operator-placement
   namespace: openshift-gitops
 spec:
   clusterSets:
