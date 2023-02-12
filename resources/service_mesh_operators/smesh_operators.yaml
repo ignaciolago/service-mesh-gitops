@@ -19,7 +19,7 @@ spec:
       name: smesh-operator-{{name}}
     spec:
       destination:
-        namespace: openshift-operators
+        namespace: openshift-gitops
         server: '{{server}}'
       project: default
       source:
