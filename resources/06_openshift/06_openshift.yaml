@@ -9,7 +9,7 @@ spec:
   - group: apps
     kind: ManagedCluster
     jsonPointers:
-    - /spec/labels
+    - /metadata/labels
   destination:
     name: ''
     namespace: openshift-gitops
