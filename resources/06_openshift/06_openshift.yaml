@@ -6,7 +6,7 @@ metadata:
   namespace: openshift-gitops
 spec:
   ignoreDifferences:
-  - group: apps
+  - group: register.open-cluster-management.io
     kind: ManagedCluster
     jsonPointers:
     - /metadata/labels
