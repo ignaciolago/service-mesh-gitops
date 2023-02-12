@@ -10,7 +10,7 @@ spec:
         configMapRef: acm-placement
         labelSelector:
           matchLabels:
-            cluster.open-cluster-management.io/placement: smesh-control-plane-{{name}}-placement
+            cluster.open-cluster-management.io/placement: smesh-control-plane-cluster01-placement
         requeueAfterSeconds: 180
   template:
     metadata:
@@ -37,7 +37,7 @@ spec:
 apiVersion: cluster.open-cluster-management.io/v1beta1
 kind: Placement
 metadata:
-  name: smesh-control-plane-{{name}}-placement
+  name: smesh-control-plane-cluster01-placement
   namespace: openshift-gitops
 spec:
   clusterSets:
