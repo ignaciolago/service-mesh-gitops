@@ -2,4 +2,3 @@
 resources:
 - 01_namespace_control_plane_cluster02.yaml
 - 02_control_plane_cluster02.yaml
-- 03_cluster02_import.yaml

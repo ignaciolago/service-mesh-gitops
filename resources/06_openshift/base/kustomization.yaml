@@ -1,6 +1,4 @@
 ---
 bases:
-#- ./scheduler.yaml
-#- ./scheduler_path.yaml
-- ./managedcluster.yaml
+- 01_cluster02_import.yaml
 
