@@ -4,3 +4,4 @@ resources:
 - acm_operatorgroup.yaml
 - acm_subscription.yaml
 - acm_multiclusterhub.yaml 
+- argocd-permissions.yaml
