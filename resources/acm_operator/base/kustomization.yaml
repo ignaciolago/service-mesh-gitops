@@ -1,7 +1,7 @@
 ---
 resources:
-- acm_namespace.yaml
-- acm_operatorgroup.yaml
-- acm_subscription.yaml
-- acm_multiclusterhub.yaml 
-- argocd-permissions.yaml
+- 01_acm_namespace.yaml
+- 02_acm_operatorgroup.yaml
+- 03_acm_subscription.yaml
+- 04_argocd-permissions.yaml
+- 05_acm_multiclusterhub.yaml 
