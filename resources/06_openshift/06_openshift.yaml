@@ -6,7 +6,7 @@ metadata:
   namespace: openshift-gitops
 spec:
   ignoreDifferences:
-  - group: '*'
+  - group: *
     kind: Secret
   destination:
     name: ''
