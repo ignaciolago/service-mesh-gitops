@@ -2,4 +2,4 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: cluster01-mesh-system
+  name: cluster02-mesh-system
