@@ -23,7 +23,7 @@ spec:
         server: '{{server}}'
       project: default
       source:
-        path: resources/04_spring-app/base
+        path: resources/04_spring_app/base
         repoURL: 'https://github.com/ignaciolago/service-mesh-gitops.git'
         targetRevision: main
       syncPolicy:
