@@ -1,0 +1,4 @@
+---
+resources:
+- smesh_cluster02.yaml
+- cluster02_import.yaml
