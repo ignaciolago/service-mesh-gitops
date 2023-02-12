@@ -1,8 +1,9 @@
 ---
 bases:
-- ./acm_operator/base
-- ./gitops_acm/base
-#- ./openshift/base
-- ./smesh_operators/base
-- ./smesh_cluster01/base
-#- ./smesh_cluster02/base
+- 01_acm_operator/base
+- 02_gitops_acm/base
+- 03_smesh_operators/base
+- 04_spring_app/base
+- 05_smesh_cluster01/base
+#- 06_openshift/base
+#- 07_smesh_cluster02/base
