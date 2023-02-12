@@ -4,8 +4,6 @@ kind: Application
 metadata:
   name: import-cluster-sandbox772
   namespace: openshift-gitops
-  annotations:
-    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true 
 spec:
   destination:
     name: ''
