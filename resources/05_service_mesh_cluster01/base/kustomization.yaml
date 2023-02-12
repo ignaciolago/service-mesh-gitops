@@ -3,3 +3,4 @@ resources:
 - 01_namespace_control_plane_cluster01.yaml
 - 02_control_plane_cluster01.yaml
 - 03_member_role.yaml
+- 04-spring-gateway.yaml
