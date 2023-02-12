@@ -1,0 +1,8 @@
+---
+bases:
+- ./acm_operator/base
+- ./gitops_acm/base
+#- ./openshift/base
+- ./smesh_operators/base
+- ./smesh_cluster01/base
+#- ./smesh_cluster02/base
