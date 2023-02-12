@@ -1,4 +1,3 @@
----
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
@@ -10,11 +9,11 @@ spec:
         configMapRef: acm-placement
         labelSelector:
           matchLabels:
-            cluster.open-cluster-management.io/placement: service_mesh-control-plane-cluster02-placement
+            cluster.open-cluster-management.io/placement: service-mesh-control-plane-cluster02-placement
         requeueAfterSeconds: 180
   template:
     metadata:
-      name: service-mesh-control-plane-{{name}}
+      name: service-mesh-control-plane-cluster02-{{name}}
       labels:
         velero.io/exclude-from-backup: "true"
     spec:
