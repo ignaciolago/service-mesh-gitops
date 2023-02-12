@@ -6,10 +6,10 @@ metadata:
   namespace: openshift-gitops
 spec:
   ignoreDifferences:
-  - kind: ManagedCluster
-    group: cluster.open-cluster-management.io
-    jsonPointers:
-    - /metadata
+    - kind: ManagedCluster
+      group: cluster.open-cluster-management.io
+      jsonPointers:
+      - /metadata
   destination:
     name: ''
     namespace: openshift-gitops
