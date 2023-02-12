@@ -6,8 +6,9 @@ metadata:
   namespace: openshift-gitops
 spec:
   ignoreDifferences:
-  - jsonPointers:
-    - /metadata
+  - kind: Secret
+    jsonPointers:
+    - /
   destination:
     name: ''
     namespace: openshift-gitops
