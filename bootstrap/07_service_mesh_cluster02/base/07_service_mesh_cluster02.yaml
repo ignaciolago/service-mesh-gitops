@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: service_mesh-cluster02-app
+  name: service-mesh-cluster02-app
   namespace: openshift-gitops
 spec:
   destination:
