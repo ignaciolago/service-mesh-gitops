@@ -5,6 +5,12 @@ metadata:
   name: import-cluster-sandbox772
   namespace: openshift-gitops
 spec:
+  ignoreDifferences:
+  - group: apps
+    kind: Deployment
+    jsonPointers:
+    - /spec/clusterLabels/cloud
+    - /spec/clusterLabels/vendor
   destination:
     name: ''
     namespace: openshift-gitops
