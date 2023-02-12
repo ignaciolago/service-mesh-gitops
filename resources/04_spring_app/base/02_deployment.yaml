@@ -25,7 +25,7 @@ spec:
       containers:
         - name: spring-app
           image: >-
-            quay.io/ilago/spring-app@sha256:2b41e54cdd8cba4747676137ab1b136553665ef442fc84ebaa9f82eb66623210
+            quay.io/ilago/spring-app:latest
           ports:
             - containerPort: 8080
               protocol: TCP
