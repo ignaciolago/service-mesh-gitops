@@ -1,4 +1,4 @@
 ---
 resources:
-- control_plane_cluster01.yaml
-- namespace_control_plane_cluster01.yaml
+- 01_namespace_control_plane_cluster01.yaml
+- 02_control_plane_cluster01.yaml
