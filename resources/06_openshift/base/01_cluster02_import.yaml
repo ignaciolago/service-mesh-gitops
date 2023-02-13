@@ -19,8 +19,8 @@ metadata:
   namespace: sandbox772
 stringData:
   autoImportRetry: "2"
-  token: sha256~ICExoipGMk4MyvBA7f3HGcWVXa0Bc4A5Nw-E0To2eJM
-  server: https://api.cluster-s5xpn.s5xpn.sandbox772.opentlc.com:6443
+  token: sha256~SHj4wY6RJSGHclUtLsTZtbMvqq1mFxSz86hMHPUtRXk
+  server: https://api.cluster-tgpvw.tgpvw.sandbox2835.opentlc.com:6443
 type: Opaque
 ---
 apiVersion: agent.open-cluster-management.io/v1
