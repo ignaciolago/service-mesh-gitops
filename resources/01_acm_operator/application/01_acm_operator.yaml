@@ -1,0 +1,23 @@
+# OpenShift subscription for ACM
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: acm-operator
+  namespace: openshift-gitops
+spec:
+  destination:
+    name: ''
+    namespace: openshift-gitops
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: resources/01_acm_operator/base
+    repoURL: https://github.com/ignaciolago/service-mesh-gitops.git
+    targetRevision: main
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - PruneLast=true

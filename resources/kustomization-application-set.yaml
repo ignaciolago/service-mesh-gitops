@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- 01_acm_operator/applicationset
+- 02_gitops_acm/applicationset
+- 03_service_mesh_operators/applicationset
+- 04_federation.yaml/applicationset
+- 04_spring_app/applicationset
+- 05_service_mesh_cluster01/applicationset
+- 06_openshift/applicationset
+- 07_service_mesh_cluster02/applicationset
