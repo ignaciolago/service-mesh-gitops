@@ -14,7 +14,7 @@ spec:
     path: resources/kustomization-application.yaml
     repoURL: https://github.com/ignaciolago/service-mesh-gitops.git
     targetRevision: main
-  project: default
+  project: service-mesh-poc-app
   syncPolicy:
     automated:
       prune: true

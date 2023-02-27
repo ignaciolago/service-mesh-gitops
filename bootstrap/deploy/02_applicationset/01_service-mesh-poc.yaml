@@ -1,40 +1,4 @@
----
-apiVersion: argoproj.io/v1alpha1
-kind: AppProject
-metadata:
-  name: service-mesh
-  namespace: openshift-gitops
-spec:
-  clusterResourceWhitelist:
-  - group: '*'
-    kind: Namespace
-  - group: argoproj.io
-    kind: Application
-  - group: argoproj.io
-    kind: AppProject
-  - group: argoproj.io
-    kind: ApplicationSet
-  - group: '*'
-    kind: Secret
-  - group: '*'
-    kind: PersistentVolumeClaim
-  - group: '*'
-    kind: Pipeline
-  - group: '*'
-    kind: ServiceAccount
-  destinations:
-  - namespace: openshift-gitops
-    server: https://kubernetes.default.svc
-  namespaceResourceBlacklist:
-  - group: ""
-    kind: ResourceQuota
-  - group: ""
-    kind: LimitRange
-  - group: ""
-    kind: NetworkPolicy
-  roles: null
-  sourceRepos:
-  - '*'
+
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
@@ -52,7 +16,7 @@ spec:
     metadata:
       name: '{{path.basename}}'
     spec:
-      project: service-mesh
+      project: service-mesh-poc-appset
       syncPolicy:
         automated:
           prune: true
@@ -63,3 +27,4 @@ spec:
         path: '{{path}}'
       destination:
         server: https://kubernetes.default.svc
+        namespace: openshift-gitops
