@@ -1,9 +1,0 @@
----
-bases:
-- 01_acm_operator/base
-- 02_gitops_acm/base
-- 03_service_mesh_operators/base
-- 04_spring_app/base
-- 05_service_mesh_cluster01/base
-- 06_openshift/base
-- 07_service_mesh_cluster02/base
