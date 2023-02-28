@@ -3,7 +3,7 @@ kind: Kustomization
 commonAnnotations:
   argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 resources:
-- 00-openshift.yaml
+- 00-import-openshift-cluster.yaml
 - 01-service-mesh-operators.yaml
 - 02-service-mesh-cluster01.yaml
 - 03-service-mesh-cluster02.yaml
