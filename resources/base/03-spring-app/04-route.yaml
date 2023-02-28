@@ -1,6 +1,8 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "4"
   name: spring-app
   namespace: spring-app
   labels:

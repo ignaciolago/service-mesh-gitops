@@ -1,6 +1,8 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "5"
   name: spring-app
   namespace: spring-app
 spec:
