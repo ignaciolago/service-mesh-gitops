@@ -15,7 +15,7 @@ spec:
   - clusters: {} 
   template:
     metadata:
-      name: '{{path.basename}}-{{name}}'
+      name: acm-operator-{{name}}
     spec:
       project: service-mesh-poc-appset
       syncPolicy:
