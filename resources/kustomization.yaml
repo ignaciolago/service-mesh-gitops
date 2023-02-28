@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
 - 01-acm_operator/applicationset
 - 02-import-openshift-cluster/applicationset
-- 03-service-mesh-operators/applicationset
+- 02-service-mesh-operators/applicationset
 #- 04-federation.yaml/applicationset
 #- 04-spring-app/applicationset
 #- 05_service-mesh-cluster01/applicationset
