@@ -11,8 +11,6 @@ spec:
   - clusters: {}
   - list:
     elements: 
-      - cluster: cluster01
-        url: https://kubernetes.default.svc
       - cluster: cluster02
         url: https://api.cluster-4544p.4544p.sandbox381.opentlc.com:6443
   template:
