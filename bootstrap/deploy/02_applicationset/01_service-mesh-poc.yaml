@@ -7,14 +7,18 @@ metadata:
   namespace: openshift-gitops
 spec:
   generators:
-  - git:
-      repoURL: https://github.com/ignaciolago/service-mesh-gitops.git
-      revision: dev2
-      directories:
-      - path: resources/kustomization-application-set.yaml
+  - list:
+      elements: 
+      - resource: resources/01_acm_operator/applicationset
+      - resource: resources/02_import-openshift-cluster/applicationset
+      - resource: resources/03_service_mesh_operators/applicationset
+      - resource: resources/04_spring_app/applicationset
+      - resource: resources/05_service_mesh_cluster01/applicationset
+      - resource: resources/06_service_mesh_cluster02/applicationset
+  - clusters: {} 
   template:
     metadata:
-      name: '{{path.basename}}'
+      name: service-mesh-poc-{{name}}
     spec:
       project: service-mesh-poc-appset
       syncPolicy:
@@ -24,7 +28,7 @@ spec:
       source:
         repoURL: https://github.com/ignaciolago/service-mesh-gitops.git
         targetRevision: dev2
-        path: '{{path}}'
+        path: resources/
       destination:
         server: https://kubernetes.default.svc
-        namespace: openshift-gitops
+
