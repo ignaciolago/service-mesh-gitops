@@ -11,10 +11,10 @@ spec:
       repoURL: https://github.com/ignaciolago/service-mesh-gitops.git
       revision: dev2
       directories:
-      - path: resources/01_acm_operator/base
+      - path: resources/01_acm_operator
   template:
     metadata:
-      name: '{{path.basename}}'
+      name: '{{path.basename}}-{{name}}'
     spec:
       project: service-mesh-poc-appset
       syncPolicy:
