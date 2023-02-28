@@ -6,6 +6,7 @@ metadata:
   namespace: openshift-gitops
 spec:
   generators:
+    - clusters: {}
     - list:
         elements: 
         - resource: service-mesh-poc
