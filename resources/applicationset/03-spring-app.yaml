@@ -1,0 +1,26 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
+  name: 03-spring-app
+  namespace: openshift-gitops
+spec:
+  generators:
+    - clusters: {}
+  template:
+    metadata:
+      name: spring-app-{{name}}
+    spec:
+      project: service-mesh-poc-appset
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+      source:
+        repoURL: https://github.com/ignaciolago/service-mesh-gitops.git
+        targetRevision: dev2
+        path: resources/base/03-spring-app
+      destination:
+        server: https://kubernetes.default.svc

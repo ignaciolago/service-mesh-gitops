@@ -1,0 +1,26 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+  name: 00-import-openshift-cluster
+  namespace: openshift-gitops
+spec:
+  generators:
+    - clusters: {}
+  template:
+    metadata:
+      name: import-openshift-cluster-{{name}}
+    spec:
+      project: service-mesh-poc-appset
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+      source:
+        repoURL: https://github.com/ignaciolago/service-mesh-gitops.git
+        targetRevision: dev2
+        path: resources/base/00-import-openshift-cluster
+      destination:
+        server: '{{cluster}}'

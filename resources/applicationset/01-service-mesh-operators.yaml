@@ -1,0 +1,26 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+  name: 01-service-mesh-operators
+  namespace: openshift-gitops
+spec:
+  generators:
+    - clusters: {}
+  template:
+    metadata:
+      name: '{{path.basename}}'
+    spec:
+      project: service-mesh-poc-appset
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+      source:
+        repoURL: https://github.com/ignaciolago/service-mesh-gitops.git
+        targetRevision: dev2
+        path: resources/base/01-service-mesh-operators
+      destination:
+        server: https://kubernetes.default.svc
