@@ -8,7 +8,7 @@ metadata:
   namespace: openshift-gitops
 spec:
   generators:
-    - clusters: {}
+  - clusters: {}
   template:
     metadata:
       name: import-openshift-cluster-{{name}}
