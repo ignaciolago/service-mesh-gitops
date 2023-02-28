@@ -20,7 +20,7 @@ spec:
     metadata:
       name: service-mesh-poc-{{name}}
     spec:
-      project: service-mesh-poc-appset
+      project: service-mesh-poc-appset-poc-appset
       syncPolicy:
         automated:
           prune: true

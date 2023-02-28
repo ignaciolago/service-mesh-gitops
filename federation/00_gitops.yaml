@@ -12,7 +12,7 @@ spec:
   source:
     path: bootstrap
     repoURL: https://github.com/ignaciolago/service-mesh-gitops.git
-  project: service-mesh
+  project: service-mesh-poc-appset
   syncPolicy:
     automated:
       prune: true

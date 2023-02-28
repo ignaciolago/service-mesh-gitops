@@ -16,7 +16,7 @@ spec:
     metadata:
       name: '{{path.basename}}'
     spec:
-      project: service-mesh
+      project: service-mesh-poc-appset
       syncPolicy:
         automated:
           prune: true
