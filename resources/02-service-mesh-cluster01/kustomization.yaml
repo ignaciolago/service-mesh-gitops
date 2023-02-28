@@ -1,0 +1,5 @@
+---
+resources:
+- 01-namespace_control_plane_cluster01.yaml
+- 02-control_plane_cluster01.yaml
+- 03-member_role.yaml

@@ -1,8 +1,0 @@
----
-resources:
-- 01_namespace.yaml
-- 02_deployment.yaml
-- 03_service.yaml
-- 04_configmap.yaml
-- 05_route.yaml
-- 06_hpa.yaml

@@ -4,4 +4,4 @@ kind: Kustomization
 commonAnnotations:
   argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 resources:
-- 03_service_mesh_operators.yaml
+- 03-service-mesh-operators.yaml

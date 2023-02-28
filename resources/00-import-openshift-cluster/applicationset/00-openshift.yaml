@@ -19,6 +19,6 @@ spec:
       source:
         repoURL: https://github.com/ignaciolago/service-mesh-gitops.git
         targetRevision: dev2
-        path: resources/02_import-openshift-cluster
+        path: resources/02-import-openshift-cluster
       destination:
         server: '{{cluster}}'

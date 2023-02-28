@@ -2,14 +2,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: service-mesh-app
+  name: service-mesh-poc
   namespace: openshift-gitops
 spec:
   generators:
-    - clusters: {}
+    - list:
+        elements: 
+        - resource: 00-import-openshift-cluster
+        - resource: 01-service-mesh-operators
+        - resource: 02-service-mesh-cluster01
+        - resource: 03-service-mesh-cluster02
+        - resource: 04-spring-app
   template:
     metadata:
-      name: '{{path.basename}}'
+      name: '{{resource}}'
     spec:
       project: service-mesh-poc-appset
       syncPolicy:
@@ -19,6 +25,7 @@ spec:
       source:
         repoURL: https://github.com/ignaciolago/service-mesh-gitops.git
         targetRevision: dev2
-        path: resources/03_service_mesh_operators
+        path: resources/{{resource}}/applicationset
       destination:
-        server: '{{cluster}}'
+        server: 'https://kubernetes.default.svc'
+

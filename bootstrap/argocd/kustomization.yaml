@@ -1,6 +1,6 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - 00_argocd_namespace.yaml
-  - 01_argocd_subscription.yaml
-  - 02_argocd_rbac.yaml
+  - 00-argocd_namespace.yaml
+  - 01-argocd_subscription.yaml
+  - 02-argocd_rbac.yaml

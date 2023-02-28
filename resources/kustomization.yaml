@@ -1,10 +1,10 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- 01_acm_operator/applicationset
-- 02_import-openshift-cluster/applicationset
-- 03_service_mesh_operators/applicationset
-#- 04_federation.yaml/applicationset
-#- 04_spring_app/applicationset
-#- 05_service_mesh_cluster01/applicationset
-#- 07_service_mesh_cluster02/applicationset
+- 01-acm_operator/applicationset
+- 02-import-openshift-cluster/applicationset
+- 03-service-mesh-operators/applicationset
+#- 04-federation.yaml/applicationset
+#- 04-spring-app/applicationset
+#- 05_service-mesh-cluster01/applicationset
+#- 07_service-mesh-cluster02/applicationset
