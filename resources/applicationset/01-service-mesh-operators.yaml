@@ -17,7 +17,7 @@ spec:
         url: https://api.cluster-4544p.4544p.sandbox381.opentlc.com:6443
   template:
     metadata:
-      name: service-mesh-operators-{{cluster}}
+      name: service-mesh-operators
     spec:
       project: service-mesh-poc-appset
       syncPolicy:
