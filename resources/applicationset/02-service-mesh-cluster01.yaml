@@ -15,7 +15,7 @@ spec:
         url: https://kubernetes.default.svc
   template:
     metadata:
-      name: service-mesh-cluster01-{{cluster}}
+      name: 'service-mesh-cluster01-{{cluster}}'
     spec:
       project: service-mesh-poc-appset
       syncPolicy:
