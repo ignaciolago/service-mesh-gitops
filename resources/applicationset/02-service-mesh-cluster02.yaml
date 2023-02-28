@@ -8,7 +8,6 @@ metadata:
   namespace: openshift-gitops
 spec:
   generators:
-  - clusters: {}
   - list:
     elements: 
       - cluster: cluster02
