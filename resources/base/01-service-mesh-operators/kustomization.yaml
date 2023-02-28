@@ -4,7 +4,7 @@ kind: Kustomization
 commonAnnotations:
   argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 bases:
-- 00-elastic_search_operator.yaml
+- 00-elastic-search-operator.yaml
 - 00-jaeger_operator.yaml
 - 00-kiali_operator.yaml
 - 01-ocp_servicemesh_operator.yaml
