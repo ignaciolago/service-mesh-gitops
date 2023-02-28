@@ -2,7 +2,7 @@
 resources:
 - 01-namespace.yaml
 - 02-deployment.yaml
-- 02-service.yaml
+- 03-service.yaml
 - 04-configmap.yaml
 - 05-route.yaml
 - 06-hpa.yaml
