@@ -4,5 +4,5 @@ resources:
 - 02-deployment.yaml
 - 02-service.yaml
 - 04-configmap.yaml
-- 05_route.yaml
-- 06_hpa.yaml
+- 05-route.yaml
+- 06-hpa.yaml
