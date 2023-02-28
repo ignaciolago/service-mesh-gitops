@@ -6,14 +6,12 @@ metadata:
   namespace: openshift-gitops
 spec:
   generators:
-  - git:
-      repoURL: https://github.com/ignaciolago/service-mesh-gitops.git
-      revision: dev2
-      directories:
-      - path: resources/applicationset
+    - list:
+        elements: 
+        - resource: service-mesh-poc
   template:
     metadata:
-      name: service-mesh-poc
+      name: '{{resource}}'
     spec:
       project: service-mesh-poc-appset
       syncPolicy:
@@ -22,7 +20,7 @@ spec:
           selfHeal: true
       source:
         repoURL: https://github.com/ignaciolago/service-mesh-gitops.git
-        targetRevision: dev2
+        targetRevision: applicationset
         path: resources/applicationset
       destination:
         server: 'https://kubernetes.default.svc'
