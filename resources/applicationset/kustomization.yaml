@@ -7,4 +7,4 @@ resources:
 - 01-service-mesh-operators.yaml
 - 02-service-mesh-cluster01.yaml
 - 02-service-mesh-cluster02.yaml
-- 04-spring-app.yaml
+- 03-spring-app.yaml

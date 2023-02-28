@@ -5,6 +5,6 @@ resources:
 - 02-import-openshift-cluster/application
 - 02-service-mesh-operators/application
 #- 04-federation/application
-#- 04-spring-app/application
+#- 03-spring-app/application
 #- 05_service-mesh-cluster01/application
 #- 07_service-mesh-cluster02/application
