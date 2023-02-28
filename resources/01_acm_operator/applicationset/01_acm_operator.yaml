@@ -12,6 +12,7 @@ spec:
       revision: dev2
       directories:
       - path: resources/01_acm_operator
+  - clusters: {} 
   template:
     metadata:
       name: '{{path.basename}}-{{name}}'
