@@ -20,7 +20,7 @@ spec:
           selfHeal: true
       source:
         repoURL: https://github.com/ignaciolago/service-mesh-gitops.git
-        targetRevision: dev2
+        targetRevision: applicationset
         path: resources/base/01-service-mesh-operators
       destination:
         server: https://kubernetes.default.svc
